@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.intro {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeOut 5s forwards;
+}
+
+.intro-title {
+    color: #343a40;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3em;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+.dark-mode {
+    background-color: #1c1c1c;
+    color: #ffffff;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #343a40;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.dark-mode h1 {
+    color: #ffffff;
+}
+
+.card {
+    margin: 20px 0;
+}
+
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.alert-success {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.fas.fa-phone-alt {
+    margin-right: 5px;
+}
+
+.dark-mode .card {
+    background-color: #454d55;
+    color: #ffffff;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot.green {
+    background-color: green;
+}
+
+.dot.red {
+    background-color: red;
+}
+
+.add-rental-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+.icon {
+    font-size: 24px; /* Adjust this size as needed */
+    margin-left: 10px; /* Add space between icons */
+    cursor: pointer;
+}

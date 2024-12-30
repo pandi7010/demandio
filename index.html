@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demandio</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1915/1915316.png">
+    <style>
+        /* Inline CSS for the icons (specific to this example) */
+        .header-icons {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .header-icons .icon {
+            font-size: 24px;
+            color: #343a40;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .header-icons .icon:hover {
+            color: #007bff;
+        }
+    </style>
+</head>
+
+<body oncontextmenu="return false;">
+    <div id="intro" class="intro">
+        <h1 class="intro-title">Demandio</h1>
+    </div>
+    <div class="container" id="main-content" style="display: none;">
+        <div class="d-flex justify-content-between align-items-center my-4">
+            <h1 id="app-title">Demandio</h1>
+            <div class="header-icons">
+                <i class="fas fa-adjust icon" id="toggle-mode" title="Toggle Mode"></i>
+                <i class="fas fa-envelope icon" data-toggle="modal" data-target="#contactUsModal" title="Contact Us"></i>
+                <i class="fas fa-file-contract icon" data-toggle="modal" data-target="#termsModal" title="Terms and Conditions"></i>
+            </div>
+        </div>
+        <input type="text" id="search" class="form-control mb-4" placeholder="Search products">
+        <div id="rentals" class="row"></div>
+    </div>
+
+    <!-- Add Rental Button -->
+    <a href="tel:8111093310" target="_blank" class="btn btn-primary add-rental-btn"><i class="fas fa-phone"></i></a>
+
+    <!-- Contact Us Modal -->
+    <div class="modal fade" id="contactUsModal" tabindex="-1" aria-labelledby="contactUsModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contactUsModalLabel">Contact Us</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="card">
+                        <img src="https://t4.ftcdn.net/jpg/08/36/42/81/360_F_836428157_5dm5SdeL8Q12z6VjIz3Y054CCP05LGW2.jpg" class="card-img-top" alt="Admin Photo">
+                        <div class="card-body">
+                            <h5 class="card-title">Founders : Pandiselvam | Selvaraj</h5>
+                            <p class="card-text">We are here to provide you with the most in-demand products! Our team is committed to offering only the products that people truly need and want. Whether you're looking for the latest trends, essential items, or solutions to everyday problems, we're here to help you find exactly what you're looking for.</p>
+                            <a href="mailto:pandiselvam1216@gmail.com" class="btn btn-primary"><i class="fas fa-envelope"></i> Mail</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms and Conditions Modal -->
+    <div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="termsModalLabel">Terms and Conditions</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Welcome to our store! By accessing or using our services, you agree to be bound by the following terms and conditions:</p>
+                    <p>1. <strong>Product Availability:</strong> We offer only demandable products based on market trends and customer needs. Product availability is subject to change, and we may update our offerings periodically.</p>
+                    <p>2. <strong>Pricing:</strong> Prices are subject to change without prior notice based on demand, availability, and other market factors. All prices are listed.</p>
+                    <p>3. <strong>Privacy Policy:</strong> We respect your privacy. Any personal information you provide will be used only for processing orders and communicating relevant updates about our products.</p>
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Google Form Integration for Submission Success -->
+    <div class="alert alert-success d-none" id="submissionSuccess">Your application is submitted successfully, it will be updated soon</div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
